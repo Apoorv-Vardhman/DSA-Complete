@@ -1,0 +1,26 @@
+LinkedList is one of the implementation classes of Collection interface
+The underlying data structure is double LinkedList
+If our frequent operation is insertion or deletion in the middle then LinkedList is the best choice
+If our frequent operation is retrieval then LinkedList is not best option
+Duplicate Objects are allowed
+Insertion order is preserved
+Heterogeneous Objects are allowed
+NULL insertion is possible
+Implements Serializable and Cloneable interfaces but not RandomAccess
+
+==================
+Constructor
+==================
+LinkedList l=new LinkedList();
+It creates an empty LinkedList Object.
+2) LinkedList l=new LinkedList(Collection c);
+To create an equivalent LinkedList Object for the given Collection.
+
+: what is the diff b/w ArrayList and LinkedList
+=============================================
+-> ArrayList is slower in insertion and deletion of elements because it internally requires
+shifting operations, But faster in accessing the elements because ArrayList use index
+position for every element.
+-> LinkedList is faster in insertion and deletion of elements because it just require modifying
+the links of nodes instead of shifting operations, But slower in accessing the elements
+because LinkedList does not use any index position.

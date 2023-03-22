@@ -1,0 +1,1148 @@
+Good evening everyone,
+
+welcome to durgasoft online training
+
+K Prakash Babu, 15 year of exp as trainer
+
+course ------> Data Structures and Algorithms (DSA) with Java
+batch number-> DSAJB3
+duration ----> 2 to 3 months
+timings -----> 5pm to 6pm [only demos will be at 6pm to 7pm]
+fees --------> Rs. 999/-
+contact -----> 720 721 2427 or 9246 21 21 43 or durgasoftonlinetraining@gmail.com
+
+Running Notes, with life time validity
+Recorded Videos, only 7 months access
+
+Syllabus:
+---------
+Chapter01: Introduction to DSA
+Chapter02: Problem Solving
+Chapter03: Time and Space complexities
+Chapter04: Notations
+Chapter05: Aspects of Algo
+Chapter06: Mathmatical Algo
+Chapter07: Bit manipulations
+Chapter08: Recursion
+Chapter09: Arrays and Strings
+Chapter10: Matrix
+Chapter11: Searching and Sorting Techniques
+Chapter12: Stacks 
+Chapter13: Queues
+Chapter14: Linked List
+Chapter15: Hashing
+Chapter16: Hashtables
+Chapter17: Tree DS
+Chapter18: Binary Trees
+Chapter19: Maps or Dictionaries
+Chapter20: Graph
+Chapter21: Greedy
+Chapter22: Backtracking
+Chapter23: Dynamic Programming
+
+Real time examples for Data Structures:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1) Music Players -------------> spotify, jio savan, prime music etc -----> linked list ds
+2) spam emails ---------------> string ds
+3) online movie tickets ------> book my show ----------------------------> arrays ds
+4) credit some amount bank----> waiting in a queue ----------------------> queue ds
+5) google maps ---------------> location identification or paths --------> graph
+
+https://www.youtube.com/watch?v=lm2WbfxoYhI&list=PLd3UqWTnYXOnGXxj7VWkGbeGKO8sQe3pL
+
+Chapter01: Introduction to DSA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+01. Introduction 
+02. Classfication of DS
+03. Algorithms and types
+04. Flow Chart
+05. Characterstics of Algo
+06. Properties of Algo
+07. Advantages of Algo
+08. Disadvantages of Algo
+09. Designing of Algo
+10. Expressing Algo
+11. Examples for some Algo
+12. Implementation for Algo in java
+
+
+01. Introduction 
+~~~~~~~~~~~~~~~~
+=> storage of data is very very imp now a days.
+=> working on that data is data structures.
+=> organizing data is called as data structure.
+=> efficiently and effectively we have to do the task ---> algorithms
+=> minimizing time and space complexities
+=> Algorithm is set of rules for solving problem.
+=> it can be simple or complex.
+
+02. Classfication of DS
+~~~~~~~~~~~~~~~~~~~~~~~
+data structures are classified into the following two types
+
+1) linear data structures -----> arrays, strings, stacks, queus, lists etc
+2) non-linear data structures -> graphs and trees
+
+03. Algorithms and types
+~~~~~~~~~~~~~~~~~~~~~~~~
+an algorithm is a step-by-step process for solving a problem.
+
+Ex:
+---
+	addition of two numbers
+
+	step1: start
+	step2: declare a,b and c
+	step3: read two numbers and store into a and b
+	step4: calcualte c = a + b
+	step5: print the result c
+	step6: stop
+
+the following are the some of examples for algorithms
+
+Brute Force Algo
+Recursive Algo
+Backtracking Algo
+Searching Algo
+Sorting Algo
+Hashing Algo
+Divide and Conquer Algo
+Greedy Algo
+Dynamic Programming Algo etc
+
+04. Flow Chart
+~~~~~~~~~~~~~~
+diagraetic or pictorial representation of an alg is called as flow chart.
+
+05. Characterstics of Algo
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+1) well defined inputs
+2) well defined output
+3) finiteness
+4) language independent
+5) clear and unambigous 
+
+06. Properties of Algo
+~~~~~~~~~~~~~~~~~~~~~~
+=> terminate at finate steps
+=> at least one output
+=> zero or more inputs
+=> pass all test cases
+
+Ex:
+---
+	1, 2 ----> 3
+	2, 1 ----> 3
+	1, 9 ----> 10
+
+print(3) 
+
+07. Advantages of Algo
+~~~~~~~~~~~~~~~~~~~~~~
+1) easy to understand
+2) step-by-step representation
+3) divide into smaller problems
+
+Ex:
+---
+	read()
+	print()
+	compute()
+
+08. Disadvantages of Algo
+~~~~~~~~~~~~~~~~~~~~~~~~~
+1) longer time
+2) time consuming
+3) conditional stmts and loops will become confuced.
+
+09. Designing of Algo
+~~~~~~~~~~~~~~~~~~~~~
+1) problem statement
+2) constraints
+3) inputs
+4) output
+5) test cases
+
+10. Expressing Algo
+~~~~~~~~~~~~~~~~~~~
+1) natural language
+2) flow chart
+3) pseudo code
+
+11. Examples for some Algo
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+01) addition of two numbers
+02) swaping of two numbers
+03) max of two numbers
+04) min of two numbers
+05) even or odd 
+06) max of three numbers
+07) min of three numbers
+08) sum of 'n' natural numbers
+09) factorial of given number
+10) prime or not
+11) fib sequence
+12) tribonaci sequence
+
+12. Implementation for Algo in java
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+01) addition of two numbers
+---------------------------
+Algo:
+-----
+		1) read two numbers let us 'a' and 'b'
+		2) calcualte a+b
+		3) print the result
+
+Implementation:
+---------------
+import java.util.*;
+
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter first number:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter second number:");
+		int b = obj.nextInt();
+
+		//business logic
+		int c;
+		c=a+b;
+
+		System.out.println("Result="+c);
+	}
+}
+
+output:
+-------
+Enter first number:
+1
+Enter second number:
+2
+Result=3
+
+Enter first number:
+1
+Enter second number:
+9
+Result=10
+
+Enter first number:
+111
+Enter second number:
+222
+Result=333
+
+02) swaping of two numbers
+--------------------------
+a=10, b=20 -----> logic ------> a=20, b=10
+
+Algo:
+-----
+		1. read two numbers 'a' and 'b'
+		2. print 'before swaping' 'a' and 'b' values
+		3. business logic
+		------------------
+			version1: by using temp variable
+			version2: by using add and sub
+			version3: by using mul and div
+			version4: by using bitwise operators
+			version5: by using single stmt
+
+		4. print 'after swaping' 'a' and 'b' values
+
+version1: by using temp variable
+--------------------------------
+temp=a;
+a=b;
+b=temp;
+
+version2: by using add and sub
+------------------------------
+a=a+b
+b=a-b
+a=a-b
+
+version3: by using mul and div
+------------------------------
+a=a*b
+b=a/b
+a=a/b
+
+version4: by using bitwise operators
+------------------------------------
+a=a^b
+b=a^b
+a=a^b
+
+version5: by using single stmt
+------------------------------
+a=a+b-(b=a);
+
+Implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static void swap_version1(int a,int b)
+	{
+		System.out.println("Before Swaping...a= "+a+" and b= "+b);
+		//version1
+		int temp;
+		temp=a;
+		a=b;
+		b=temp;
+		System.out.println("After Swaping...a= "+a+" and b= "+b);
+	}
+	static void swap_version2(int a,int b)
+	{
+		System.out.println("Before Swaping...a= "+a+" and b= "+b);
+		//version2
+		a=a+b;
+		b=a-b;
+		a=a-b;		
+		System.out.println("After Swaping...a= "+a+" and b= "+b);
+	}
+	static void swap_version3(int a,int b)
+	{
+		System.out.println("Before Swaping...a= "+a+" and b= "+b);
+		//version3
+		a=a*b;
+		b=a/b;
+		a=a/b;
+		System.out.println("After Swaping...a= "+a+" and b= "+b);
+	}
+	static void swap_version4(int a,int b)
+	{
+		System.out.println("Before Swaping...a= "+a+" and b= "+b);
+		//version4
+		a=a^b;
+		b=a^b;
+		a=a^b;
+		System.out.println("After Swaping...a= "+a+" and b= "+b);
+	}
+	static void swap_version5(int a,int b)
+	{
+		System.out.println("Before Swaping...a= "+a+" and b= "+b);
+		//version5
+		a=a+b-(b=a);
+		System.out.println("After Swaping...a= "+a+" and b= "+b);
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		System.out.println("VERSION1");
+		Demo.swap_version1(a,b);
+		System.out.println();	
+		System.out.println("VERSION2");
+		Demo.swap_version2(a,b);
+		System.out.println();	
+		System.out.println("VERSION3");
+		Demo.swap_version3(a,b);
+		System.out.println();	
+		System.out.println("VERSION4");
+		Demo.swap_version4(a,b);
+		System.out.println();	
+		System.out.println("VERSION5");
+		Demo.swap_version5(a,b);
+		System.out.println();	
+		
+	}
+}
+
+
+output:
+-------
+Enter a value:
+10
+Enter b value:
+20
+VERSION1
+Before Swaping...a= 10 and b= 20
+After Swaping...a= 20 and b= 10
+
+VERSION2
+Before Swaping...a= 10 and b= 20
+After Swaping...a= 20 and b= 10
+
+VERSION3
+Before Swaping...a= 10 and b= 20
+After Swaping...a= 20 and b= 10
+
+VERSION4
+Before Swaping...a= 10 and b= 20
+After Swaping...a= 20 and b= 10
+
+VERSION5
+Before Swaping...a= 10 and b= 20
+After Swaping...a= 20 and b= 10
+
+03) max of two numbers
+----------------------
+Algo:
+-----
+		1. read 'a' and 'b' values from the user.
+		2. apply business logic
+
+		logic1: by using conditional operator
+		logic2: by using predefined methods
+
+		3. print the result
+
+logic1: by using conditional operator
+-------------------------------------
+(condition)?Trueblock:Falseblock
+
+(a>b)?a:b
+
+logic2: by using predefined methods
+-----------------------------------
+Math.max(a,b)
+
+Implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static int big_version1(int a,int b)
+	{
+		return (a>b)?a:b;
+	}
+	static int big_version2(int a,int b)
+	{
+		return Math.max(a,b);
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		System.out.println("Biggest="+Demo.big_version1(a,b));
+		System.out.println("Biggest="+Demo.big_version2(a,b));
+	}
+}
+
+output:
+-------
+Enter a value:
+10
+Enter b value:
+20
+Biggest=20
+Biggest=20
+
+04) min of two numbers
+----------------------
+Algo:
+-----
+		1. read 'a' and 'b' values from the user.
+		2. apply business logic
+
+		logic1: by using conditional operator
+		logic2: by using predefined methods
+
+		3. print the result
+
+logic1: by using conditional operator
+-------------------------------------
+(condition)?Trueblock:Falseblock
+
+(a<b)?a:b
+
+logic2: by using predefined methods
+-----------------------------------
+Math.min(a,b)
+
+
+
+05) even or odd 
+---------------
+Algo:
+-----
+	1) read 'n' value from the user.
+	2) apply business logic
+
+		if(n%2==0)
+			print "even"
+		else
+			print "odd"
+
+	3) print the result
+
+Implementation:
+---------------
+import java.util.*;
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		if(n%2==0)
+			System.out.println("Even Number.");
+		else
+			System.out.println("Odd Number.");
+	}
+}
+
+output:
+-------
+Enter n value:
+5
+Odd Number.
+
+Enter n value:
+6
+Even Number.
+
+06) max of three numbers
+------------------------
+Algo:
+-----
+	1) read 'a', 'b' and 'c' values from the user.
+	2) apply business logic
+
+		version1: by using conditional operator
+		version2: by using predefined methods
+
+	3) print the result
+
+version1: by using conditional operator
+---------------------------------------
+(condition)?tb:fb
+
+(a>b && a>c)?a:(b>c?b:c)
+
+version2: by using predefined methods
+-------------------------------------
+Math.max(Math.max(a,b),c)
+
+Implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static int max_version1(int a,int b,int c)
+	{
+		return (a>b && a>c)?a:(b>c?b:c);
+	}
+
+	static int max_version2(int a,int b,int c)
+	{
+		return Math.max(Math.max(a,b),c);
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		System.out.println("Enter c value:");
+		int c = obj.nextInt();
+
+		System.out.println("max="+Demo.max_version1(a,b,c));
+		System.out.println("max="+Demo.max_version2(a,b,c));
+	}
+}
+
+output:
+-------
+Enter a value:
+10
+Enter b value:
+4
+Enter c value:
+78
+max=78
+max=78
+
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+3
+max=3
+max=3
+
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+-3
+max=2
+max=2
+
+07) min of three numbers
+------------------------
+Algo:
+-----
+	1) read 'a', 'b' and 'c' values from the user.
+	2) apply business logic
+
+		version1: by using conditional operator
+		version2: by using predefined methods
+
+	3) print the result
+
+version1: by using conditional operator
+---------------------------------------
+(condition)?tb:fb
+
+(a<b && a<c)?a:(b<c?b:c)
+
+version2: by using predefined methods
+-------------------------------------
+Math.min(Math.min(a,b),c)
+
+08) sum of 'n' natural numbers
+------------------------------
+Algo:
+-----	
+	1) read 'n' value from the user
+	2) apply business logic
+
+	logic1: by using math formula
+	logic2: by using for loop
+	logic3: by using recursion
+
+	3) print the result
+
+logic1: by using math formula
+-----------------------------
+n*(n+1)/2
+
+logic2: by using for loop
+--------------------------
+s=0;
+for(i=0;i<n;i++)
+{
+	s=s+i;
+}
+
+logic3: by using recursion
+--------------------------
+int sum(int n)
+{
+	if(n==0)
+		return 0;
+	else
+		return n+sum(n-1);
+}
+
+Implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static int sum_version1(int n)
+	{
+		return n*(n+1)/2;
+	}
+	static int sum_version2(int n)
+	{
+		int s=0,i;
+		for(i=0;i<=n;i++)
+			s=s+i;
+		return s;
+	}
+	static int sum_version3(int n)
+	{
+		if(n==0)
+			return 0;
+		else
+			return n+sum_version3(n-1);
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println("sum="+Demo.sum_version1(n));
+		System.out.println("sum="+Demo.sum_version2(n));
+		System.out.println("sum="+Demo.sum_version3(n));
+	}
+}
+
+output:
+-------
+Enter n value:
+5
+sum=15
+sum=15
+sum=15
+
+Enter n value:
+3
+sum=6
+sum=6
+sum=6
+
+09) factorial of given number
+-----------------------------
+Algo:
+-----
+	1. read 'n' value from the user
+	2. apply business logic
+		logic1: by using loop
+		logic2: by using recursion
+	3. print the result
+
+logic1: by using loop
+----------------------
+m=1;
+for(i=1;i<=n;i++)
+{
+	m=m*i;
+}
+print m
+
+logic2: by using recursion
+--------------------------
+int fact(int n)
+{
+	if(n==0)
+		return 1;
+	else
+		return n*fact(n-1);
+}
+
+implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static int fact_version1(int n)
+	{
+		int m=1,i;
+		for(i=1;i<=n;i++)
+			m=m*i;
+		return m;
+	}
+	static int fact_version2(int n)
+	{
+		if(n==0)
+			return 1;
+		else
+			return n*fact_version2(n-1);
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println("factorial="+Demo.fact_version1(n));
+		System.out.println("factorial="+Demo.fact_version2(n));
+	}
+}
+
+output:
+-------
+Enter n value:
+5
+factorial=120
+factorial=120
+
+Enter n value:
+0
+factorial=1
+factorial=1
+
+10) prime or not
+----------------
+Algo:
+-----
+	1) read 'n' value 
+	2) business logic
+
+	logic1: by using loop
+	logic2: by using recursion
+
+	3) print the result
+
+logic1: by using loop
+---------------------
+f=0;
+for(i=1;i<=n;i++)
+{
+	if(n%i==0)
+		f++;
+}
+if f==2 then 'Yes' else 'No'
+
+logic2: by using recursion
+--------------------------
+boolean isprime(int n,int i)
+{
+	if(i==1)
+		return true;
+	else if(n%i==0)
+		return false;
+	else
+		return isprime(n,--i);
+}
+
+Implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static boolean prime_version1(int n)
+	{
+		int i,f=0;
+		for(i=1;i<=n;i++)
+		{
+			if(n%i==0)
+				f++;
+		}
+		return f==2;
+	}
+	static boolean prime_version2(int n,int i)
+	{
+		if(i==1)
+			return true;
+		else if(n%i==0)
+			return false;
+		else
+			return prime_version2(n,--i);
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println("factorial="+Demo.prime_version1(n));
+		System.out.println("factorial="+Demo.prime_version2(n,n/2));
+	}
+}
+
+output:
+-------
+Enter n value:
+5
+factorial=true
+factorial=true
+
+Enter n value:
+6
+factorial=false
+factorial=false
+
+Enter n value:
+7
+factorial=true
+factorial=true
+
+11) fib sequence
+-----------------
+0 1 1 2 3 5 8 13 21 .......
+
+Algo:
+-----
+	1. read 'n' value from the user
+	2. business logic
+	3. print the list
+
+logic:
+------
+	AL = []
+	a = 0
+	b = 1
+	AL.add(a)
+	AL.add(b)
+	for(i=1;i<=n-2;i++)
+	{
+		c=a+b;
+		AL.add(c);
+		a=b;
+		b=c;
+	}
+
+Implementatation:
+-----------------
+import java.util.*;
+class Demo
+{
+	static ArrayList<Integer> fib(int n)
+	{
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		int a,b,c,i;
+		a=0;
+		b=1;
+		al.add(a);
+		al.add(b);
+		for(i=1;i<=n-2;i++)
+		{
+			c=a+b;
+			al.add(c);
+			a=b;
+			b=c;
+		}
+		return al;
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println(Demo.fib(n));
+	}
+}
+
+output:
+-------
+Enter n value:
+10
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+12) tribonaci sequence
+-----------------------
+0, 1, 1, 2, 3, 5, 8, ...... fib
+0, 1, 2, 3, 6, 11, 20, .... tri
+
+Algo:
+-----
+	1. read 'n' value from the user
+	2. business logic
+	3. print the list
+
+logic:
+------
+	AL = []
+	a = 0
+	b = 1
+	c = 2
+	AL.add(a)
+	AL.add(b)
+	AL.add(c)
+	for(i=1;i<=n-3;i++)
+	{
+		d=a+b+c;
+		AL.add(d);
+		a=b;
+		b=c;
+		c=d;
+	}
+
+Implementation:
+---------------
+import java.util.*;
+class Demo
+{
+	static ArrayList<Integer> fib(int n)
+	{
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		int a,b,c,i,d;
+		a=0;
+		b=1;
+		c=2;
+		al.add(a);
+		al.add(b);
+		al.add(c);
+		for(i=1;i<=n-3;i++)
+		{
+			d=a+b+c;
+			al.add(d);
+			a=b;
+			b=c;
+			c=d;
+		}
+		return al;
+	}
+}
+class Test 
+{
+	public static void main(String[] args) 
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println(Demo.fib(n));
+	}
+}
+
+output:
+-------
+Enter n value:
+10
+[0, 1, 2, 3, 6, 11, 20, 37, 68, 125]
+
+Chapter: Arrays
+~~~~~~~~~~~~~~~
+01. Introduction
+02. advantages of arrays
+03. disadvantages of arrays
+04. declaration of arrays
+05. creation of arrays
+06. memory representation of arrays
+07. intialization of arrays
+08. declaration, creation and intialization in single line
+09. length identifier
+10. index concept
+11. exceptions in arrays
+12. reading and writing array elements
+13. 1-d array programs
+14. 2-d array programs
+
+01. Introduction
+~~~~~~~~~~~~~~~~~
+=> a variable can hold only one value at a time.
+
+Ex:
+---
+	a = 10
+	s.o.p(a);//-----> 10
+	a = 55;
+	s.o.p(a); ------> 55
+
+=> mutliple variables are required to hold multiple values, it is not good every time.
+
+Ex:
+---
+	int a1,a2,a3,a4,a5,a6,a7,a8,a9,a10;
+
+=> an array is indexed collection of group of elements of same type under a common name.
+
+Ex:
+---
+	int a[10];
+
+	int ---> all elements of type int
+	a -----> all elements are represented by the name 'a'
+	10 ----> number of elements in array
+
+=> fixed number of elements, under common name.
+
+02. advantages of arrays
+~~~~~~~~~~~~~~~~~~~~~~~~
+1) group of elements (more elements)
+2) single name
+3) index support
+4) insertion order is preserved
+5) duplicates are allowed
+
+03. disadvantages of arrays
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+session starts in few min...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+04. declaration of arrays
+05. creation of arrays
+06. memory representation of arrays
+07. intialization of arrays
+08. declaration, creation and intialization in single line
+09. length identifier
+10. index concept
+11. exceptions in arrays
+12. reading and writing array elements
+13. 1-d array programs
+14. 2-d array programs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

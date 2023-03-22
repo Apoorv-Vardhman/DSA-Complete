@@ -1,0 +1,11 @@
+Vector is the implementation class of List interface which is also used to store group of individual objects where duplicate values are allowed
+-> Vector is exactly similar to ArrayList but ArrayList is not a synchronized class where Vector is a synchronized class
+-> Vector is also called legacy class because it is available from java 1.0 version.
+
+===========================
+Vector Class Constructors
+===========================
+1) Vector<E> v = new Vector<E>();
+2) Vector<E> v = new Vector<E>(int capacity);
+3) Vector<E> v = new Vector<E>(Collection obj);
+

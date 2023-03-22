@@ -1,0 +1,117 @@
+searching ----> linear and binary search
+----------------------------------------
+Ex:
+---
+import java.util.*;
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		Random r = new Random();
+
+		int a[] = new int[10];
+
+		for(int i=0;i<a.length;i++)
+		{
+			a[i] = r.nextInt(100);//it generates random number from 0 to 100
+		}
+
+		System.out.println(Arrays.toString(a));
+
+		//linear search
+
+		System.out.println("Enter key element to search:");
+		int key=obj.nextInt();
+
+		int i,index=-1;
+
+		for(i=0;i<a.length;i++){
+			if(key==a[i]){
+				index=i;
+				break;
+			}
+		}
+
+		System.out.println("location= "+index);
+	}
+}
+
+output:
+-------
+[19, 50, 68, 79, 94, 13, 39, 56, 93, 40]
+Enter key element to search:
+39
+location= 6
+
+[73, 72, 68, 86, 0, 73, 86, 44, 58, 50]
+Enter key element to search:
+55
+location= -1
+
+binary search:
+--------------
+the array must be in sorted order..
+
+Ex:
+---
+import java.util.*;
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+		Random r = new Random();
+
+		int a[] = new int[10];
+
+		for(int i=0;i<a.length;i++)
+		{
+			a[i] = r.nextInt(100);//it generates random number from 0 to 100
+		}
+
+		System.out.println(Arrays.toString(a));
+		Arrays.sort(a);
+		System.out.println(Arrays.toString(a));
+
+		//linear search
+
+		System.out.println("Enter key element to search:");
+		int key=obj.nextInt();
+
+		int index=-1,low,high,mid;
+		low=0;
+		high=a.length-1;
+
+		while(low<=high){
+			mid=(low+high)/2;
+			if(a[mid]==key)
+			{
+				index=mid;
+				break;
+			}
+			else if(a[mid]>key)
+				high=mid-1;
+			else
+				low=mid+1;
+		}
+
+		System.out.println("location= "+index);
+	}
+}
+
+output:
+-------
+[35, 87, 94, 59, 14, 7, 98, 14, 78, 95]
+[7, 14, 14, 35, 59, 78, 87, 94, 95, 98]
+Enter key element to search:
+87
+location= 6
+
+[89, 79, 29, 72, 17, 58, 67, 29, 13, 67]
+[13, 17, 29, 29, 58, 67, 67, 72, 79, 89]
+Enter key element to search:
+90
+location= -1

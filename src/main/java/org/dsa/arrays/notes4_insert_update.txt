@@ -1,0 +1,541 @@
+Inserting, Deleting and Updating Array Elements:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Inserting an element into the array:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case1: inserting an element in to the first location
+case2: inserting an element in to the last location
+case3: inserting an element in to specified location
+
+deleting an element from an array:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case1: deleting an element from first location
+case2: deleting an element from last location
+case3: deleting an element from given location
+case4: deleting all elements from an array
+case5: deleting specified element from an array
+case6: deleting specified element from an array first and second occurrence
+case7: deleting specified element from an array in all occurrences
+
+updating element in an array:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case1: updating an element present at given location.
+case2: updating the given element with new element first occurrence.
+case3: updating the given element with new element first and second occurrence.
+case4: updating the given element with new element in all occurrences.
+
+
+
+Inserting an element into the array:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following are the various possibilities to insert an element into an array
+
+case1: inserting an element in to the first location
+case2: inserting an element in to the last location
+case3: inserting an element in to specified location
+
+case1: inserting an element in to the first location
+----------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] insertAtFirst(int a[], int element){
+		int i,b[] = new int[a.length+1];
+		b[0] = element;
+		for(i=0;i<a.length;i++){
+			b[i+1]=a[i];
+		}
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {44, 66, 77};
+		System.out.println(Arrays.toString(a));//[44, 66, 77]
+		a=Demo.insertAtFirst(a,33);
+		System.out.println(Arrays.toString(a));//[33, 44, 66, 77]
+	}
+}
+
+output:
+-------
+[44, 66, 77]
+[33, 44, 66, 77]
+
+case2: inserting an element in to the last location
+---------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] insertAtLast(int a[], int element){
+		int i,b[] = new int[a.length+1];
+		for(i=0;i<a.length;i++){
+			b[i]=a[i];
+		}
+		b[i]=element;
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {44, 66, 77};
+		System.out.println(Arrays.toString(a));//[44, 66, 77]
+		a=Demo.insertAtLast(a,88);
+		System.out.println(Arrays.toString(a));//[44, 66, 77, 88]
+		a=Demo.insertAtLast(a,99);
+		System.out.println(Arrays.toString(a));//[44, 66, 77, 88, 99]
+	}
+}
+
+output:
+-------
+[44, 66, 77]
+[44, 66, 77, 88]
+[44, 66, 77, 88, 99]
+
+case3: inserting an element in to specified location
+----------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] insertAtLoc(int a[], int element,int location){
+		int i,b[] = new int[a.length+1];
+		for(i=0;i<location;i++){
+			b[i]=a[i];
+		}
+		b[location]=element;
+		for(;i<a.length;i++){
+			b[i+1]=a[i];
+		}
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {44, 66, 77};
+		System.out.println(Arrays.toString(a));//[44, 66, 77]
+		a=Demo.insertAtLoc(a,55,1);
+		System.out.println(Arrays.toString(a));//[44, 55, 66, 77]
+	}
+}
+
+output:
+-------
+[44, 66, 77]
+[44, 55, 66, 77]
+
+deleting an element from an array:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case1: deleting an element from first location
+case2: deleting an element from last location
+case3: deleting an element from given location
+case4: deleting all elements from an array
+case5: deleting specified element from an array
+case6: deleting specified element from an array first and second occurrence
+case7: deleting specified element from an array in all occurrences
+
+case1: deleting an element from first location
+----------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteatFirstLocation(int a[]){
+		int i,b[]=new int[a.length-1];
+		for(i=0;i<a.length-1;i++)
+		{
+			b[i]=a[i+1];
+		}
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {44, 66, 77};
+		System.out.println(Arrays.toString(a));//[44, 66, 77]
+		a=Demo.deleteatFirstLocation(a);
+		System.out.println(Arrays.toString(a));//[66, 77]
+	}
+}
+
+output:
+-------
+[44, 66, 77]
+[66, 77]
+
+case2: deleting an element from last location
+---------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteatLastLocation(int a[]){
+		int i,b[]=new int[a.length-1];
+		for(i=0;i<a.length-1;i++)
+		{
+			b[i]=a[i];
+		}
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {44, 66, 77};
+		System.out.println(Arrays.toString(a));//[44, 66, 77]
+		a=Demo.deleteatLastLocation(a);
+		System.out.println(Arrays.toString(a));//[44, 66]
+	}
+}
+
+output:
+-------
+[44, 66, 77]
+[44, 66]
+
+case3: deleting an element from given location
+----------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteatFromLocation(int a[],int location){
+		int i,k,b[]=new int[a.length-1];
+		for(i=0,k=0;i<a.length;i++)
+		{
+			if(i==location)
+				continue;
+			else
+				b[k++]=a[i];
+		}
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 13, 14, 15, 16};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 13, 14, 15, 16]
+		a=Demo.deleteatFromLocation(a,2);
+		System.out.println(Arrays.toString(a));//[10, 11, 13, 14, 15, 16]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 13, 14, 15, 16]
+[10, 11, 13, 14, 15, 16]
+
+case4: deleting all elements from an array
+------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteAll(int a[]){
+		int b[] = new int[0];
+		return b;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 13, 14, 15, 16};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 13, 14, 15, 16]
+		a=Demo.deleteAll(a);
+		System.out.println(Arrays.toString(a));//[]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 13, 14, 15, 16]
+[]
+
+case5: deleting specified element from an array
+-----------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteElement(int a[], int element){
+		int index=-1,i,k;
+		for(i=0;i<a.length;i++){
+			if(a[i]==element){
+				index=i;
+				break;
+			}
+		}
+		if(index!=-1){
+			int b[] = new int[a.length-1];
+			for(i=0,k=0;i<a.length;i++){
+				if(i==index)
+					continue;
+				else
+					b[k++] = a[i];
+			}
+			return b;
+		}
+		else
+			return a;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		a=Demo.deleteElement(a,11);
+		System.out.println(Arrays.toString(a));//[10, 12, 11, 14, 11, 16, 11]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 12, 11, 14, 11, 16, 11]
+
+case6: deleting specified element from an array first and second occurrence
+---------------------------------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteatFromLocation(int a[],int location){
+		int i,k,b[]=new int[a.length-1];
+		for(i=0,k=0;i<a.length;i++)
+		{
+			if(i==location)
+				continue;
+			else
+				b[k++]=a[i];
+		}
+		return b;
+	}
+	static int[] deleteElementFromFirstAndSecondOcc(int a[], int element){
+		int index=-1,i,k,c=0;
+		for(i=0;i<a.length;i++){
+			if(a[i]==element){
+				c++;
+				a=deleteatFromLocation(a,i);
+				if(c==2)
+					break;
+			}
+		}
+		return a;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		a=Demo.deleteElementFromFirstAndSecondOcc(a,11);
+		System.out.println(Arrays.toString(a));//[10, 12, 14, 11, 16, 11]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 12, 14, 16, 11]
+
+case7: deleting specified element from an array in all occurrences
+-------------------------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static int[] deleteatFromLocation(int a[],int location){
+		int i,k,b[]=new int[a.length-1];
+		for(i=0,k=0;i<a.length;i++)
+		{
+			if(i==location)
+				continue;
+			else
+				b[k++]=a[i];
+		}
+		return b;
+	}
+	static int[] deleteAllOcc(int a[], int element){
+		int i;
+		for(i=0;i<a.length;i++){
+			if(a[i]==element){
+				a=deleteatFromLocation(a,i);
+			}
+		}
+		return a;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		a=Demo.deleteAllOcc(a,11);
+		System.out.println(Arrays.toString(a));//[10, 12, 14, 16]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 12, 14, 16]
+
+updating element in an array:-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+case1: updating an element present at given location.
+case2: updating the given element with new element first occurrence.
+case3: updating the given element with new element first and second occurrence.
+case4: updating the given element with new element in all occurrences.
+
+case1: updating an element present at given location.
+-----------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static void updateAtLoc(int a[],int loc,int ele){
+		a[loc] = ele;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		Demo.updateAtLoc(a,1,999);
+		System.out.println(Arrays.toString(a));//[10, 999, 12, 11, 14, 11, 16, 11]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 999, 12, 11, 14, 11, 16, 11]
+
+case2: updating the given element with new element first occurrence.
+--------------------------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static void updateElementFirst(int a[],int olde,int newe){
+		for(int i=0;i<a.length;i++){
+			if(a[i]==olde){
+				a[i]=newe;
+				break;
+			}
+		}
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		Demo.updateElementFirst(a,11,888);
+		System.out.println(Arrays.toString(a));//[10, 888, 12, 11, 14, 11, 16, 11]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 888, 12, 11, 14, 11, 16, 11]
+
+case3: updating the given element with new element first and second occurrence.
+-------------------------------------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static void updateElementFirstAndSecond(int a[],int olde,int newe){
+		int c=0;
+		for(int i=0;i<a.length;i++){
+			if(a[i]==olde){
+				c++;
+				a[i]=newe;
+				if(c==2)
+					break;
+			}
+		}
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		Demo.updateElementFirstAndSecond(a,11,888);
+		System.out.println(Arrays.toString(a));//[10, 888, 12, 11, 14, 11, 16, 11]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 888, 12, 888, 14, 11, 16, 11]
+
+case4: updating the given element with new element in all occurrences.
+----------------------------------------------------------------------
+import java.util.*;
+
+class Demo
+{
+	static void updateElementAllOcc(int a[],int olde,int newe){
+		for(int i=0;i<a.length;i++){
+			if(a[i]==olde){
+				a[i]=newe;
+			}
+		}
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		int a[] = {10, 11, 12, 11, 14, 11, 16, 11};
+		System.out.println(Arrays.toString(a));//[10, 11, 12, 11, 14, 11, 16, 11]
+		Demo.updateElementAllOcc(a,11,888);
+		System.out.println(Arrays.toString(a));//[10, 888, 12, 888, 14, 888, 16, 888]
+	}
+}
+
+output:
+-------
+[10, 11, 12, 11, 14, 11, 16, 11]
+[10, 888, 12, 888, 14, 888, 16, 888]

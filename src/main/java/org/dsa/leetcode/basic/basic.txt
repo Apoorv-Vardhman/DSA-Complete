@@ -1,0 +1,12 @@
+1. Two Sum https://leetcode.com/problems/two-sum
+9. Palindrome Number https://leetcode.com/problems/palindrome-number
+13. Roman to Integer https://leetcode.com/problems/roman-to-integer
+58. Length of Last Word https://leetcode.com/problems/length-of-last-word
+66. Plus One https://leetcode.com/problems/plus-one
+27. Remove Element https://leetcode.com/problems/remove-element
+709. To Lower Case https://leetcode.com/problems/to-lower-case
+374. Guess Number Higher or Lower https://leetcode.com/problems/guess-number-higher-or-lower
+217. Contains Duplicate https://leetcode.com/problems/contains-duplicate
+26. Remove Duplicates from Sorted Array https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+69. Sqrt(x) https://leetcode.com/problems/sqrtx
+28. Find the Index of the First Occurrence in a String

@@ -1,0 +1,899 @@
+01. max of two numbers
+02. sum of 'n' natural numbers
+03. factorial of the given number
+04. swaping of two integer values
+05. prime number or not
+06. max of three numbers
+07. fib sequence
+08. trib sequence
+
+
+01. max of two numbers
+-----------------------
+Here we have supply two integer values, and we required to find max or biggest of 'a' and 'b'.
+
+Ex:
+---
+	10,11 ----> 11
+	10,3 -----> 10
+
+Algorithm:
+----------
+			1. read two integer values from the user.
+			2. apply business logic.
+
+				logic1: by using conditional operator
+				--------------------------------------
+				(condition)?TB:FB
+				(a>b)?a:b
+
+				logic2: by using predefined methods
+				-----------------------------------
+				Math.max(a,b)
+
+			3. print the result.
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static int maxv1(int a,int b){
+		return (a>b)?a:b;
+	}
+
+	static int maxv2(int a,int b){
+		return Math.max(a,b);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		System.out.println(Demo.maxv1(a,b));
+		System.out.println(Demo.maxv2(a,b));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>java Test
+Enter a value:
+10
+Enter b value:
+20
+20
+20
+
+C:\prakashclasses>java Test
+Enter a value:
+10
+Enter b value:
+-20
+10
+10
+
+06. max of three numbers
+------------------------
+Here we have supply three integer values, and we required to find max or biggest of 'a', 'b' and 'c'.
+
+Ex:
+---
+	10,11,12 ----> 12
+	10,11,-12 ---> 11
+	10,-11,-12 --> 10
+
+Algorithm:
+----------
+			1. read three integer values from the user.
+			2. apply business logic.
+
+				logic1: by using conditional operator
+				--------------------------------------
+				(condition)?TB:FB
+				(a>b && a>c)?a:(b>c?b:c)
+
+				logic2: by using predefined methods
+				-----------------------------------
+				Math.max(Math.max(a,b),c)
+
+			3. print the result.
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static int maxv1(int a,int b,int c){
+		return (a>b && a>c)?a:(b>c?b:c);
+	}
+
+	static int maxv2(int a,int b,int c){
+		return Math.max(Math.max(a,b),c);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		System.out.println("Enter c value:");
+		int c = obj.nextInt();
+
+		System.out.println(Demo.maxv1(a,b,c));
+		System.out.println(Demo.maxv2(a,b,c));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+3
+3
+3
+
+C:\prakashclasses>java Test
+Enter a value:
+1
+Enter b value:
+2
+Enter c value:
+-3
+2
+2
+
+C:\prakashclasses>java Test
+Enter a value:
+1
+Enter b value:
+-2
+Enter c value:
+-3
+1
+1
+
+02. sum of 'n' natural numbers
+------------------------------
+0+1+2+3+4+5+.....+n = sum of 'n' natural numbers
+
+n=0 -----> 0
+n=1 -----> 0+1=1
+n=2 -----> 0+1+2=3
+n=3 -----> 0+1+2+3=6
+n=4 -----> 0+1+2+3+4=10
+n=5 -----> 0+1+2+3+4+5=15
+
+Algorithm:
+----------
+			1. read 'n' value from the user.
+			2. apply business logic
+
+			logic1: by using math formaula
+			------------------------------
+			n(n+1)/2
+
+			logic2: by using looping
+			------------------------
+			s=0
+			for(i=0;i<n;i++)
+			{
+				s=s+i;
+			}
+			print s
+
+			logic3: by using recursion
+			--------------------------
+			int sum(int n)
+			{
+				if(n==0)
+					return 0;
+				else
+					return n+sum(n-1);
+			}
+
+			3. print the result on the screen
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static int sumv1(int n){
+		return (n*(n+1))/2;
+	}
+
+	static int sumv2(int n){
+		int i,s=0;
+		for(i=0;i<=n;i++)
+			s=s+i;
+		return s;
+	}
+
+	static int sumv3(int n){
+		if(n==0)
+			return 0;
+		else
+			return n+sumv3(n-1);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println(Demo.sumv1(n));
+		System.out.println(Demo.sumv2(n));
+		System.out.println(Demo.sumv3(n));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+Enter n value:
+5
+15
+15
+15
+
+C:\prakashclasses>java Test
+Enter n value:
+3
+6
+6
+6
+
+C:\prakashclasses>java Test
+Enter n value:
+7
+28
+28
+28
+
+C:\prakashclasses>java Test
+Enter n value:
+0
+0
+0
+0
+
+
+
+
+
+
+03. factorial of the given number
+---------------------------------
+Implement an algorithm and program to find factorial of the given number.
+
+Ex:
+---
+	5! = 5x4x3x2x1x0! = 5x4x3x2x1x1 = 120
+	0! = 1
+	2! = 2x1x0! = 2x1x1 = 2
+
+Algorithm:
+----------
+			1. read 'n' value from the user.
+			2. apply business logic
+			logic1: by using looping
+			------------------------
+			f=1;
+			for(i=1;i<=n;i++)
+			{
+				f=f*i;
+			}
+			print f
+
+			logic2: by using recursion
+			--------------------------
+			int fact(int n)
+			{
+				if(n==1)
+					return 1;
+				else
+					return n*fact(n-1);
+			}
+			3. print the result
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static int factv1(int n)
+	{
+		int f=1,i;
+		for(i=1;i<=n;i++)
+			f=f*i;
+		return f;
+	}
+	static int factv2(int n)
+	{
+		if(n==0)
+			return 1;
+		else
+			return n*factv2(n-1);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println(Demo.factv1(n));
+		System.out.println(Demo.factv2(n));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+Enter n value:
+5
+120
+120
+
+04. swaping of two integer values
+----------------------------------
+swaping means interchanging the values.
+
+Ex:
+---
+	a=10,b=20 -----> a=20,b=10
+
+Algorithm:
+----------
+			1. read 'a' and 'b' values from the user.
+			2. before swaping print the values of 'a' and 'b'
+			3. apply business logic
+			logic1: by using temp variable
+			-------------------------------
+			temp=a;
+			a=b;
+			b=temp;
+
+			logic2: by using addition and sub
+			---------------------------------
+			a=a+b;
+			b=a-b;
+			a=a-b;
+
+			logic3: by using mul and div
+			----------------------------
+			a=a*b;
+			b=a/b;
+			a=a/b;
+
+			logic4: by using bitwise operators
+			----------------------------------
+			a=a^b
+			b=a^b
+			a=a^b
+
+			logic5: by using single line statement
+			---------------------------------------
+			a=a+b-b=a;
+
+			4. after swaping print the values of 'a' and 'b'
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static void swap1(int a,int b){
+		System.out.println("Before swaping a="+a+" and b="+b);
+		int t;
+		t=a;
+		a=b;
+		b=t;
+		System.out.println("After swaping a="+a+" and b="+b);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		Demo.swap1(a,b);
+	}
+}
+
+output:
+-------
+Enter a value:
+10
+Enter b value:
+20
+Before swaping a=10 and b=20
+After swaping a=20 and b=10
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static void swap1(int a,int b){
+		System.out.println("Before swaping a="+a+" and b="+b);
+		a=a+b;
+		b=a-b;
+		a=a-b;
+		System.out.println("After swaping a="+a+" and b="+b);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		Demo.swap1(a,b);
+	}
+}
+
+output:
+-------
+Enter a value:
+111
+Enter b value:
+222
+Before swaping a=111 and b=222
+After swaping a=222 and b=111
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static void swap1(int a,int b){
+		System.out.println("Before swaping a="+a+" and b="+b);
+		a=a*b;
+		b=a/b;
+		a=a/b;
+		System.out.println("After swaping a="+a+" and b="+b);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		Demo.swap1(a,b);
+	}
+}
+
+output:
+-------
+Enter a value:
+5
+Enter b value:
+3
+Before swaping a=5 and b=3
+After swaping a=3 and b=5
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static void swap1(int a,int b){
+		System.out.println("Before swaping a="+a+" and b="+b);
+		a=a^b;
+		b=a^b;
+		a=a^b;
+		System.out.println("After swaping a="+a+" and b="+b);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		Demo.swap1(a,b);
+	}
+}
+
+output:
+------
+Enter a value:
+3
+Enter b value:
+4
+Before swaping a=3 and b=4
+After swaping a=4 and b=3
+
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static void swap1(int a,int b){
+		System.out.println("Before swaping a="+a+" and b="+b);
+		a=a+b-(b=a);
+		System.out.println("After swaping a="+a+" and b="+b);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter a value:");
+		int a = obj.nextInt();
+
+		System.out.println("Enter b value:");
+		int b = obj.nextInt();
+
+		Demo.swap1(a,b);
+	}
+}
+
+output:
+-------
+Enter a value:
+10
+Enter b value:
+11
+Before swaping a=10 and b=11
+After swaping a=11 and b=10
+
+05. prime number or not
+-----------------------
+a number is said to be prime, if it is divisible by one and itself. i.e. factors is equal to 2.
+
+Algorithm:
+----------
+			1. read 'n' value from the user.
+			2. business logic
+
+			logic1: by using iteration (loop)
+			---------------------------------
+			factors=0;
+			for(i=1;i<=n;i++)
+			{
+				if(n%i==0)
+					factors++;
+			}
+			if factors==2 then print 'true' else 'false'
+
+			logic2: by using recursion
+			--------------------------
+			boolean isprime2(int n,int i)
+			{
+				if(n==1)
+					return true;
+				else if(n%i==0)
+					return false;
+				else
+					return isprime2(n,--i);
+			}
+
+			3. print true or false.
+Ex:
+---
+import java.util.*;
+
+class Demo
+{
+	static boolean isprime1(int n){
+		int f=0,i;
+		for(i=1;i<=n;i++){
+			if(n%i==0)
+				f++;
+		}
+		return f==2;
+	}
+
+	static boolean isprime2(int n,int i){
+		if(i==1)
+			return true;
+		else if(n%i==0)
+			return false;
+		else
+			return isprime2(n,--i);
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n= obj.nextInt();
+
+		System.out.println(Demo.isprime1(n));
+		System.out.println(Demo.isprime2(n,n/2));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+Enter n value:
+5
+true
+true
+
+C:\prakashclasses>java Test
+Enter n value:
+6
+false
+false
+
+C:\prakashclasses>java Test
+Enter n value:
+10
+false
+false
+
+C:\prakashclasses>java Test
+Enter n value:
+11
+true
+true
+
+07. fib sequence
+08. trib sequence
+
+
+IMPLEMENT A ALGO/PROGRAM TO GENERATE FIBNOCCI NUMBERS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0 1 1 2 3 5 8 13 ......
+
+FIB Seq ---> every number is sum of previous two numbers
+
+ALGO:
+-----
+	1. read 'n' value from the user.
+	2. create an empty ArrayList object [container to hold all numbers]
+	3. push all calcualted fib numbers into ArrayList object.
+
+	logic:
+	------
+			ArrayList<Integer> obj = new ArrayList<Integer>();
+			a=0
+			b=1
+			obj.add(a);
+			obj.add(b);
+			for(i=1;i<=n-2;i++)
+			{
+				c=a+b;
+				obj.add(c);
+				a=b;
+				b=c;
+			}
+
+	4. print ArrayList object
+
+Implementation:
+---------------
+import java.util.*;
+
+class Demo
+{
+	static ArrayList<Integer> getFibSeq(int n)
+	{
+		ArrayList<Integer> obj = new ArrayList<Integer>();
+
+		int a,b,c,i;
+
+		a=0;
+		b=1;
+		obj.add(a);
+		obj.add(b);
+
+		for(i=1;i<=n-2;i++){
+			c=a+b;
+			obj.add(c);
+			a=b;
+			b=c;
+		}
+
+		return obj;
+	}
+}
+
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println(Demo.getFibSeq(n));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+Enter n value:
+2
+[0, 1]
+
+C:\prakashclasses>java Test
+Enter n value:
+3
+[0, 1, 1]
+
+C:\prakashclasses>java Test
+Enter n value:
+4
+[0, 1, 1, 2]
+
+C:\prakashclasses>java Test
+Enter n value:
+5
+[0, 1, 1, 2, 3]
+
+IMPLEMENT A ALGO/PROGRAM TO GENERATE TRIBONCCI NUMBERS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0 1 2 ----> 0 1 2 3 6 11 20 ....
+
+ALGO:
+-----
+		1. read 'n' value from the user.
+		2. create an array with size n.
+		3. push all the calcualted trib seq values into an array.
+
+		logic:
+		------
+				a=0;
+				b=1;
+				c=2;
+				arr[0] = a;
+				arr[1] = b;
+				arr[2] = c;
+				for(i=3;i<n;i++)
+				{
+					d=a+b+c;
+					arr[i]=d;
+					a=b;
+					b=c;
+					c=d;
+				}
+
+		4. print the result array
+
+IMPLEMENTATION:
+---------------
+import java.util.*;
+
+class Demo
+{
+	static int[] getTribSeq(int n)
+	{
+		int arr[] = new int[n];
+
+		int a,b,c,d,i;
+		a=0;
+		b=1;
+		c=2;
+		arr[0] = a;
+		arr[1] = b;
+		arr[2] = c;
+
+		for(i=3;i<n;i++){
+			d=a+b+c;
+			arr[i]=d;
+			a=b;
+			b=c;
+			c=d;
+		}
+
+		return arr;
+	}
+}
+
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter n value:");
+		int n = obj.nextInt();
+
+		System.out.println(Arrays.toString(Demo.getTribSeq(n)));
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+Enter n value:
+5
+[0, 1, 2, 3, 6]

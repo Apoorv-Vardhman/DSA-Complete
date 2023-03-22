@@ -1,0 +1,232 @@
+sorting array elements:-
+~~~~~~~~~~~~~~~~~~~~~~~
+[3, 1, 5, 2, 4] sort in asc order ----> [1, 2, 3, 4, 5]
+[3, 1, 5, 2, 4] sort in desc order ---> [5, 4, 3, 2, 1]
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter size of the array:");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+
+		int i;
+
+		System.out.println("Enter "+n+" Elements...");
+		for(i=0;i<n;i++)
+		{
+			a[i] = obj.nextInt();
+		}
+
+		System.out.println("Array before sorting = "+Arrays.toString(a));
+		//business logic
+		int j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]>a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		System.out.println("Array after sorting asc order = "+Arrays.toString(a));
+	}
+}
+
+output:
+-------
+Enter size of the array:
+5
+Enter 5 Elements...
+1 5 2 4 3
+Array before sorting = [1, 5, 2, 4, 3]
+Array after sorting asc order = [1, 2, 3, 4, 5]
+
+Ex:
+----
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter size of the array:");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+
+		int i;
+
+		System.out.println("Enter "+n+" Elements...");
+		for(i=0;i<n;i++)
+		{
+			a[i] = obj.nextInt();
+		}
+
+		System.out.println("Array before sorting = "+Arrays.toString(a));
+		//business logic
+		int j,temp;
+		for(i=0;i<n;i++)
+		{
+			for(j=i+1;j<n;j++)
+			{
+				if(a[i]<a[j])
+				{
+					temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		System.out.println("Array after sorting desc order = "+Arrays.toString(a));
+	}
+}
+
+output:
+-------
+Enter size of the array:
+5
+Enter 5 Elements...
+1 5 2 4 3
+Array before sorting = [1, 5, 2, 4, 3]
+Array after sorting desc order = [5, 4, 3, 2, 1]
+
+Ex:
+---
+import java.util.*;
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		System.out.println("Enter size of the array:");
+		int n = obj.nextInt();
+
+		int a[] = new int[n];
+
+		int i;
+
+		System.out.println("Enter "+n+" Elements...");
+		for(i=0;i<n;i++)
+		{
+			a[i] = obj.nextInt();
+		}
+
+		System.out.println("Array before sorting = "+Arrays.toString(a));
+		//business logic
+		Arrays.sort(a);
+		System.out.println("Array after sorting desc order = "+Arrays.toString(a));
+	}
+}
+
+output:
+-------
+Enter size of the array:
+8
+Enter 8 Elements...
+2 1 7 3 5 9 4 6
+Array before sorting = [2, 1, 7, 3, 5, 9, 4, 6]
+Array after sorting desc order = [1, 2, 3, 4, 5, 6, 7, 9]
+
+
+
+
+sorting array in asc order ----> user defined
+sorting array in desc order ---> user defined
+sorting array in asc order ----> predefined ---> Arrays.sort(a);
+
+max element in an array
+min element in an array
+
+sort the array asc ---> a ---> 1stsmall, 2nd small, 3rd small, .....2nd max, 1st max
+
+1st max ------> a[n-1]         1st min -------> a[1-1]
+2nd max ------> a[n-2]         2nd min -------> a[2-1]
+3rd max ------> a[n-3]         3rd min -------> a[3-1]
+
+kth max ------> a[n-k]         kth min -------> a[k-1]
+and so on
+
+Ex:
+---
+import java.util.*;
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Random r = new Random();
+
+		int a[] = new int[10];
+
+		for(int i=0;i<a.length;i++)
+		{
+			a[i] = r.nextInt(100);//it generates random number from 0 to 100
+		}
+
+		System.out.println(Arrays.toString(a));
+
+	}
+}
+
+output:
+-------
+C:\prakashclasses>javac Test.java
+
+C:\prakashclasses>java Test
+[79, 8, 90, 78, 84, 64, 50, 39, 24, 89]
+
+C:\prakashclasses>java Test
+[38, 80, 23, 60, 16, 86, 48, 15, 91, 93]
+
+C:\prakashclasses>java Test
+[16, 1, 0, 61, 26, 66, 48, 39, 88, 8]
+
+
+Ex:
+---
+import java.util.*;
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Random r = new Random();
+
+		int a[] = new int[10];
+
+		for(int i=0;i<a.length;i++)
+		{
+			a[i] = r.nextInt(100);//it generates random number from 0 to 100
+		}
+
+		System.out.println("Before Sorting===>"+ Arrays.toString(a));
+		Arrays.sort(a);
+		System.out.println("After Sorting===>"+ Arrays.toString(a));
+
+		System.out.println("1st max = "+a[a.length-1]+"\t1st min = "+a[1-1]);
+		System.out.println("2nd max = "+a[a.length-2]+"\t2nd min = "+a[2-1]);
+		System.out.println("3rd max = "+a[a.length-3]+"\t3rd min = "+a[3-1]);
+	}
+}
+
+output:
+-------
+Before Sorting===>[61, 73, 55, 10, 64, 92, 85, 4, 78, 76]
+After Sorting===>[4, 10, 55, 61, 64, 73, 76, 78, 85, 92]
+1st max = 92    1st min = 4
+2nd max = 85    2nd min = 10
+3rd max = 78    3rd min = 55

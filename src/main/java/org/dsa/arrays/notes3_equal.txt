@@ -1,0 +1,180 @@
+eqaulity of arrays:-
+~~~~~~~~~~~~~~~~~~~
+case1: by checking manually
+case2: by checking manually and ignoring order
+case3: by using predefined methods
+case4: by using predefined methods and ignoring order
+
+case1: by checking manually
+---------------------------
+import java.util.*;
+
+class Demo{
+	static boolean myEqual(int a[],int b[]){
+		for(int i=0;i<a.length;i++){
+			if(a[i]!=b[i])
+				return false;
+		}
+		return true;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int w[] = {1, 2, 3};
+		int x[] = {4, 5, 6};
+		int y[] = {1, 2, 3};
+		int z[] = {1, 3, 2};
+
+		System.out.println("w==>"+Arrays.toString(w));
+		System.out.println("x==>"+Arrays.toString(x));
+		System.out.println("y==>"+Arrays.toString(y));
+		System.out.println("z==>"+Arrays.toString(z));
+
+		System.out.println("w==x : "+Demo.myEqual(w,x));//false
+		System.out.println("w==y : "+Demo.myEqual(w,y));//true
+		System.out.println("w==z : "+Demo.myEqual(w,z));//false
+	}
+}
+
+output:
+-------
+w==>[1, 2, 3]
+x==>[4, 5, 6]
+y==>[1, 2, 3]
+z==>[1, 3, 2]
+w==x : false
+w==y : true
+w==z : false
+
+case2: by checking manually and ignoring order
+----------------------------------------------
+import java.util.*;
+
+class Demo{
+	static boolean myEqual(int a[],int b[]){
+		for(int i=0;i<a.length;i++){
+			if(a[i]!=b[i])
+				return false;
+		}
+		return true;
+	}
+}
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int w[] = {1, 2, 3};
+		int x[] = {4, 5, 6};
+		int y[] = {1, 2, 3};
+		int z[] = {1, 3, 2};
+
+		System.out.println("w==>"+Arrays.toString(w));
+		System.out.println("x==>"+Arrays.toString(x));
+		System.out.println("y==>"+Arrays.toString(y));
+		System.out.println("z==>"+Arrays.toString(z));
+
+		Arrays.sort(w);
+		Arrays.sort(x);
+		Arrays.sort(y);
+		Arrays.sort(z);
+
+		System.out.println("w==x : "+Demo.myEqual(w,x));//false
+		System.out.println("w==y : "+Demo.myEqual(w,y));//true
+		System.out.println("w==z : "+Demo.myEqual(w,z));//true
+	}
+}
+
+output:
+-------
+w==>[1, 2, 3]
+x==>[4, 5, 6]
+y==>[1, 2, 3]
+z==>[1, 3, 2]
+w==x : false
+w==y : true
+w==z : true
+
+case3: by using predefined methods
+----------------------------------
+import java.util.*;
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int w[] = {1, 2, 3};
+		int x[] = {4, 5, 6};
+		int y[] = {1, 2, 3};
+		int z[] = {1, 3, 2};
+
+		System.out.println("w==>"+Arrays.toString(w));
+		System.out.println("x==>"+Arrays.toString(x));
+		System.out.println("y==>"+Arrays.toString(y));
+		System.out.println("z==>"+Arrays.toString(z));
+
+		System.out.println("w==x : "+Arrays.equals(w,x));//false
+		System.out.println("w==y : "+Arrays.equals(w,y));//true
+		System.out.println("w==z : "+Arrays.equals(w,z));//false
+	}
+}
+
+output:
+-------
+w==>[1, 2, 3]
+x==>[4, 5, 6]
+y==>[1, 2, 3]
+z==>[1, 3, 2]
+w==x : false
+w==y : true
+w==z : false
+
+case4: by using predefined methods and ignoring order
+-----------------------------------------------------
+import java.util.*;
+
+class Test
+{
+	public static void main(String[] args)
+	{
+		Scanner obj = new Scanner(System.in);
+
+		int w[] = {1, 2, 3};
+		int x[] = {4, 5, 6};
+		int y[] = {1, 2, 3};
+		int z[] = {1, 3, 2};
+
+		System.out.println("w==>"+Arrays.toString(w));
+		System.out.println("x==>"+Arrays.toString(x));
+		System.out.println("y==>"+Arrays.toString(y));
+		System.out.println("z==>"+Arrays.toString(z));
+
+		Arrays.sort(w);
+		Arrays.sort(x);
+		Arrays.sort(y);
+		Arrays.sort(z);
+
+		System.out.println("w==x : "+Arrays.equals(w,x));//false
+		System.out.println("w==y : "+Arrays.equals(w,y));//true
+		System.out.println("w==z : "+Arrays.equals(w,z));//true
+	}
+}
+
+output:
+-------
+w==>[1, 2, 3]
+x==>[4, 5, 6]
+y==>[1, 2, 3]
+z==>[1, 3, 2]
+w==x : false
+w==y : true
+w==z : true

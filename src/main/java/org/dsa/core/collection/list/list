@@ -1,0 +1,41 @@
+1. List
+    List is child interface of Collection
+    duplicates are allowed
+    order is preserved
+
+Implementation of List
+-------------------------
+1. ArrayList
+    Implementation class of List interface
+    Duplicate are allowed
+    Insertion order preserved
+    null value are acceptable
+    internal data structure of arraylist is growable array (object array)
+    default capacity is 10
+
+    ========================================
+    ArrayList constructor
+    ========================================
+    ArrayList l =  new ArrayList();
+    ArrayList l =  new ArrayList(int capacity);
+    ArrayList al = new ArrayList(Collection c);
+
+    ========================================
+    Methods of ArrayList
+    ========================================
+    1. add(Object obj)
+    2. add(int index,Object obj)
+    3. addAll(Collection c)
+    4. remove(Object obj)
+    5. remove(int index)
+    6. get(int index)
+    7. contains(Object obj) - check object is available or not
+    8. clear()
+    9. isEmpty()
+    10. retainAll(Collection c) - keep this collection and remove remaining
+    11. indexOf(Object obj) - first occurrence
+    12. lastIndexOf(Object obj) - last occurrence
+    13. set(int index, Object obj) - replace the object based on given index
+    14. iterator() - forward direction
+    15. listIterator() - forward and back
+    16. removeAll(Collection c)

@@ -1,0 +1,21 @@
+-> Stack is a child class of Vector and implements List interface
+-> Stack stores a group of objects b using a mechanism called LIFO
+-> LIFO stands for Last in first out , it means last inserted element deleted first.
+-> Legacy class
+
+
+=======================
+Stack Class Constructor:
+========================
+Stack<E> s = new Stack<E>( );
+
+
+Methods:
+-> We can use all collection Methods
+-> We can also use legacy methods of Vector class like addElement(), removeElement(),setElementAt(),.....
+-> But if we want to follow the LIFO mechanism, we should use Stack methods like follows
+1. E push(E obj) : this method will add new element into the Stack
+2. E pop() : this method deletes the top element available on Stack
+3. E peek() : this method just returns the top element available on Stack
+
+Enumeration cursor is for Iteration
